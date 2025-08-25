@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://e4r4kboyash6"]
+
+[ext_resource type="Script" uid="uid://b8i1lgcky6yhc" path="res://capitol.gd" id="1_56j83"]
+[ext_resource type="Texture2D" uid="uid://jlifqppx2fw3" path="res://images/capitol(1).png" id="1_xsbgt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_56j83"]
+radius = 88.0
+height = 258.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_56j83")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(222.5, 186.5)
+scale = Vector2(1.21289, 1.21289)
+texture = ExtResource("1_xsbgt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(12, 4)
+shape = SubResource("CapsuleShape2D_56j83")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

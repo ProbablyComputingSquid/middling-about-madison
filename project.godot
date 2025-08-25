@@ -15,6 +15,10 @@ run/main_scene="uid://ddesfqtmeqcdp"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [dotnet]
 
 project/assembly_name="daydream-jumpstart-platformer"
@@ -27,6 +31,10 @@ version_control/autoload_on_startup=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[global_group]
+
+player=""
 
 [input]
 

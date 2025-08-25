@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 500.0
-const JUMP_VELOCITY = -700.0
+const JUMP_VELOCITY = -750.0
 
 var crouched = false
 

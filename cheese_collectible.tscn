@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bghhuc4xs810"]
+
+[ext_resource type="AudioStream" uid="uid://c1qwelc6v73pu" path="res://splat.mp3" id="1_yntbc"]
+[ext_resource type="Script" uid="uid://drdlc1n8o8lge" path="res://cheese_collide.gd" id="2_3ow1o"]
+[ext_resource type="Texture2D" uid="uid://bs7phnb6lfoty" path="res://images/cheese.png" id="3_0avwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dstsf"]
+size = Vector2(64.25, 54)
+
+[node name="CheeseCollectible" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_yntbc")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, -1)
+script = ExtResource("2_3ow1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11.875, 7)
+shape = SubResource("RectangleShape2D_dstsf")
+debug_color = Color(0.915943, 8.06671e-05, 0.711005, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(11.5, 7)
+scale = Vector2(1.59375, 1.4375)
+texture = ExtResource("3_0avwl")

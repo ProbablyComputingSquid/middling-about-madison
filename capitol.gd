@@ -10,8 +10,8 @@ func _ready() -> void:
 func _on_body_entered(body):
 	print("registered collision")
 	if body.is_in_group("player"):
-		print("player collision")
-		Global.add_score(1);
+		print("player collision");
+		
 		sfx.play();
 		hide();
 		await sfx.finished;
