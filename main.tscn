@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=4 uid="uid://ddesfqtmeqcdp"]
+[gd_scene load_steps=24 format=4 uid="uid://ddesfqtmeqcdp"]
 
 [ext_resource type="Script" uid="uid://bdaoxgc37o2du" path="res://player.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://bgpyubnih5eev" path="res://canvas_modulate.gd" id="1_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://b345lgm82m73y" path="res://images/madison_sprite_touched_up-removebg-preview.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://0ol5thpkyrqg" path="res://images/street.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bh0qs6nxl2etd" path="res://images/madison_tileset_basic.jpg" id="3_1bvp3"]
@@ -14,6 +15,7 @@
 [ext_resource type="Script" uid="uid://cok67omx38dbq" path="res://cheese_text.gd" id="12_dg77c"]
 [ext_resource type="PackedScene" uid="uid://e4r4kboyash6" path="res://capitol.tscn" id="13_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://d58ya5ffjcd4" path="res://fitchburg_sign.tscn" id="14_w48qg"]
+[ext_resource type="AudioStream" uid="uid://cprvbbcxack1w" path="res://chiptune_more_like_cheesetune.mp3" id="15_vivmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(62, 129.75)
@@ -1486,6 +1488,10 @@ sources/6 = SubResource("TileSetAtlasSource_efxa6")
 
 [node name="Main" type="Node"]
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(1, 1, 0, 1)
+script = ExtResource("1_2cqfq")
+
 [node name="cheeses" type="Node" parent="."]
 
 [node name="CheeseCollectible9" parent="cheeses" instance=ExtResource("11_efxa6")]
@@ -1661,5 +1667,7 @@ position = Vector2(7491, 808)
 [node name="Node2D2" parent="." instance=ExtResource("14_w48qg")]
 position = Vector2(3716, 771)
 
-[node name="Node2D3" parent="." instance=ExtResource("13_ycdy4")]
-position = Vector2(-1065, 714)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_vivmo")
+autoplay = true
+parameters/looping = true
