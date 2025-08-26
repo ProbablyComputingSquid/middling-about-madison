@@ -1626,7 +1626,6 @@ autoscroll = Vector2(15, 0)
 repeat_times = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/background"]
-visible = false
 z_index = -6
 position = Vector2(1249, 180)
 scale = Vector2(0.984375, 0.603516)
@@ -1634,7 +1633,6 @@ texture = ExtResource("8_4c57u")
 centered = false
 
 [node name="midground" type="Parallax2D" parent="Background"]
-visible = false
 scroll_scale = Vector2(0.5, 0.5)
 scroll_offset = Vector2(-294, 353)
 repeat_size = Vector2(1000, 0)
@@ -1648,7 +1646,6 @@ texture = ExtResource("9_efxa6")
 centered = false
 
 [node name="foreground" type="Parallax2D" parent="Background"]
-visible = false
 scroll_scale = Vector2(0.9, 0.9)
 scroll_offset = Vector2(-206, 357)
 repeat_size = Vector2(650, 0)
