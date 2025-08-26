@@ -1656,7 +1656,10 @@ texture = ExtResource("10_dg77c")
 centered = false
 
 [node name="Node2D" parent="." instance=ExtResource("13_ycdy4")]
-position = Vector2(7486, 807)
+position = Vector2(7491, 808)
 
 [node name="Node2D2" parent="." instance=ExtResource("14_w48qg")]
 position = Vector2(3716, 771)
+
+[node name="Node2D3" parent="." instance=ExtResource("13_ycdy4")]
+position = Vector2(-1065, 714)
